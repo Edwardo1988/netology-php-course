@@ -1,0 +1,24 @@
+<?php
+
+$data = file_get_contents('/phone-book.json');
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Пятое задание</title>
+</head>
+<body>
+	<table >
+	<? php foreach($data as $item){ ?>
+		<tr>
+			<td><?= $item('firstName') ?></td>
+			<td><?= $item('$lastName') ?></td>
+			<td><?= $item('$address') ?></td>
+			<td><?= $item('$phoneNumber') ?></td>
+		</tr>
+	<?php } ?>
+	</table>
+</body>
+</html>
